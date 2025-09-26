@@ -1,0 +1,15 @@
+class Solution:
+    def reversebin(self, k: str) -> int:
+        if k.isdigit():
+            num = int(k)
+        else:
+            num = ord(k) 
+        binval = format(num, '08b')
+        rev = binval[::-1]
+        res = int(rev, 2)
+        return res
+if __name__ == "__main__":
+    n = input("Enter a character or number: ")
+    r = Solution()
+    result = r.reversebin(n)
+    print(result)
